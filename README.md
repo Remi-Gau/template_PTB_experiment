@@ -67,6 +67,17 @@ you can create a new repository on your github account with all the basic folder
 files and submodules already set up. You only have to then clone the repository
 and you are good to go.
 
+
+## How to install and run
+
+Install
 ```
 git clone --recurse-submodules https://github.com/your_github_account/the_name_of_your_new_experiment.git
+```
+
+Set parameters in `setParameters.m`
+
+Run
+```
+mainScript
 ```
