@@ -1,17 +1,15 @@
 **Unit tests and coverage**
 
-[![](https://img.shields.io/badge/Octave-CI-blue?logo=Octave&logoColor=white)](https://github.com/Remi-gau/template_matlab_analysis/actions)
-![](https://github.com/Remi-gau/template_matlab_analysis/workflows/CI/badge.svg) 
+[![](https://img.shields.io/badge/Octave-CI-blue?logo=Octave&logoColor=white)](https://github.com/cpp-lln-lab/template_PTB_experiment/actions)
+![](https://github.com/Remi-gau/template_matlab_analysis/workflows/CI/badge.svg)
 
-[![codecov](https://codecov.io/gh/Remi-gau/template_matlab_analysis/branch/master/graph/badge.svg)](https://codecov.io/gh/Remi-gau/template_matlab_analysis)
+[![codecov](https://codecov.io/gh/Remi-gau/template_matlab_analysis/branch/master/graph/badge.svg)](https://codecov.io/gh/cpp-lln-lab/template_PTB_experiment)
 
 **Miss_hit linter**
 
-[![Build Status](https://travis-ci.com/Remi-gau/template_matlab_analysis.svg?branch=master)](https://travis-ci.com/Remi-gau/template_matlab_analysis)
-
+[![Build Status](https://travis-ci.com/Remi-gau/template_matlab_analysis.svg?branch=master)](https://travis-ci.com/cpp-lln-lab/template_PTB_experiment)
 
 # Template repository for matlab analysis project
-
 
 ## Content
 
@@ -52,27 +50,10 @@
 
 ## Python environment
 
-More on this [here](https://the-turing-way.netlify.app/reproducible-research/renv/renv-package.html)
+More on this
+[here](https://the-turing-way.netlify.app/reproducible-research/renv/renv-package.html)
 
-```bash
-# create env
-conda create --name crc_nighres python=3.7 
-
-# activate it
-conda activate crc_nighres
-
-# deactivate it
-conda deactivate
-
-# export package list in the env into a YAML file
-conda env export > environment.yml
-
-# create env from YAML file
-conda env create -f environment.yml
-
-```
-
-- [Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
+[Conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
 
 ## Testing your code
 
@@ -80,29 +61,12 @@ conda env create -f environment.yml
 
 ## How to install and use this template
 
-### Download with git
+By using the
+[template PTB experiment repository](https://github.com/cpp-lln-lab/template_PTB_experiment):
+you can create a new repository on your github account with all the basic folders,
+files and submodules already set up. You only have to then clone the repository
+and you are good to go.
 
-``` bash
-cd fullpath_to_directory_where_to_install
-# use git to download the code
-git clone https://github.com/cpp-lln-lab/CPP_BIDS.git
-# move into the folder you have just created
-cd CPP_BIDS
-# add the src folder to the matlab path and save the path
-matlab -nojvm -nosplash -r "addpath(fullfile(pwd, 'src')); savepath ();"
 ```
-
-Then get the latest commit:
-```bash
-# from the directory where you downloaded the code
-git pull origin master
+git clone --recurse-submodules https://github.com/your_github_account/the_name_of_your_new_experiment.git
 ```
-
-To work with a specific version, create a branch at a specific version tag number
-```bash
-# creating and checking out a branch that will be called version1 at the version tag v0.0.1
-git checkout -b version1 v0.0.1
-```
-
-
-
