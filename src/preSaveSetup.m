@@ -5,9 +5,11 @@ function varargout = preSaveSetup(varargin)
 
     % generic function to prepare structures before saving
 
-    [thisEvent, duration, onset, cfg, logFile] = ...
+    [thisEvent, iBlock, iTrial, duration, onset, cfg, logFile] = ...
         deal(varargin{:});
 
+    thisEvent.event = iTrial;
+    thisEvent.block = iBlock;
     thisEvent.keyName = 'n/a';
     thisEvent.duration = duration;
     thisEvent.onset = onset - cfg.experimentStart;

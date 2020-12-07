@@ -55,6 +55,10 @@ try
     
     %% For Each Block
     
+    for iBlock = 1:cfg.design.nbBlocks
+        
+        waitFor(cfg, cfg.timing.onsetDelay)
+    
     for iTrial = 1:cfg.design.nbTrials
         
         fprintf('\n - Running trial %.0f \n', iTrial);
@@ -64,19 +68,22 @@ try
         
         [thisEvent, thisFixation, cfg] = preTrialSetup(cfg, iBlock, iTrial);
        
-        eyeTracker('Message', cfg, ...
-            ['start_trial-', num2str(iTrial), '_', thisEvent.trial_type]);
+        % AVAILABLE IN A NEW RELEASE SOON
+        %
+        % eyeTracker('Message', cfg, ...
+        %     ['start_trial-', num2str(iTrial), '_', thisEvent.trial_type]);
         
         % play the dots and collect onset and duraton of the event
         [onset, duration] = doTrial(cfg, thisEvent, thisFixation);
         
         thisEvent = preSaveSetup( ...
             thisEvent, ...
-            thisFixation, ...
+            iBlock, ...
             iTrial, ...
             duration, onset, ...
             cfg, ...
             logFile);
+        
         saveEventsFile('save', cfg, thisEvent);
         
         % collect the responses and appends to the event structure for
@@ -87,11 +94,15 @@ try
         responseEvents(1).extraColumns = logFile.extraColumns;
         saveEventsFile('save', cfg, responseEvents);
         
-        eyeTracker('Message', cfg, ...
-            ['end_trial-', num2str(iEvent), '_', thisEvent.trial_type]);
+        % AVAILABLE IN A NEW RELEASE SOON
+        %
+        % eyeTracker('Message', cfg, ...
+        %     ['end_trial-', num2str(iTrial), '_', thisEvent.trial_type]);
         
         waitFor(cfg, cfg.timing.ISI);
 
+    end
+    
     end
     
     % End of the run for the BOLD to go down

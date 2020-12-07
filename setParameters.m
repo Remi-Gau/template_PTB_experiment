@@ -2,7 +2,7 @@
 
 function [cfg] = setParameters()
 
-    % VISUAL LOCALIZER
+    % Template PTB experiment
 
     % Initialize the parameters and general configuration variables
     cfg = struct();
@@ -20,8 +20,10 @@ function [cfg] = setParameters()
     cfg.debug.smallWin = false; % To test on a part of the screen, change to 1
     cfg.debug.transpWin = true; % To test with trasparent full size screen
 
-    cfg.verbose = 1;
-
+    cfg.verbose = 0;
+    
+    cfg.skipSyncTests = 0;
+    
     %% Engine parameters
 
     cfg.testingDevice = 'mri';
@@ -55,6 +57,11 @@ function [cfg] = setParameters()
 
     cfg.design.nbRepetitions = 8;
     cfg.design.nbEventsPerBlock = 12; % DO NOT CHANGE
+    
+    cfg.design.blockNames = {'condition_1','condition_2'};
+    
+    cfg.design.nbBlocks = 1;
+    cfg.design.nbTrials = 4;
 
     %% Timing
 
@@ -71,7 +78,7 @@ function [cfg] = setParameters()
     % Time between events in secs
     cfg.timing.ISI = 0;
     % Number of seconds before the motion stimuli are presented
-    cfg.timing.onsetDelay = 0;
+    cfg.timing.onsetDelay = 2;
     % Number of seconds after the end all the stimuli before ending the run
     cfg.timing.endDelay = 3.6;
 
