@@ -44,7 +44,7 @@ function [cfg] = setParameters()
 
     cfg.design.blockNames = {'condition_1','condition_2'};
     
-    cfg.design.nbBlocks = 1;
+    cfg.design.nbBlocks = 2;
     cfg.design.nbTrials = 4;
 
     %% Timing
