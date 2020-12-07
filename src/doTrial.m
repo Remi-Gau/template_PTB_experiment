@@ -1,6 +1,5 @@
 function [onset, duration] = doTrial(cfg, thisEvent, thisFixation)
 
-
     %% Get parameters
 
     % Set for how many frames this event will last
@@ -10,7 +9,7 @@ function [onset, duration] = doTrial(cfg, thisEvent, thisFixation)
     vbl = Screen('Flip', cfg.screen.win);
     onset = vbl;
 
-        while framesLeft
+    while framesLeft
 
         thisFixation.fixation.color = cfg.fixation.color;
         if thisEvent.target(1) && vbl < (onset + cfg.target.duration)
@@ -26,8 +25,8 @@ function [onset, duration] = doTrial(cfg, thisEvent, thisFixation)
 
         % Check for end of loop
         framesLeft = framesLeft - 1;
-        
-        end
+
+    end
 
     %% Erase last dots
 

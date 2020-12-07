@@ -21,9 +21,9 @@ function [cfg] = setParameters()
     cfg.debug.transpWin = true; % To test with trasparent full size screen
 
     cfg.verbose = 0;
-    
+
     cfg.skipSyncTests = 0;
-    
+
     %% Engine parameters
 
     cfg.testingDevice = 'mri';
@@ -42,8 +42,8 @@ function [cfg] = setParameters()
 
     %% Experiment Design
 
-    cfg.design.blockNames = {'condition_1','condition_2'};
-    
+    cfg.design.blockNames = {'condition_1', 'condition_2'};
+
     cfg.design.nbBlocks = 2;
     cfg.design.nbTrials = 4;
 
