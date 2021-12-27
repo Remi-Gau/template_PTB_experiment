@@ -26,7 +26,7 @@ jobs:
         src: src
         with_coverage: true
         cover_xml_file: coverage.xml
-        
+
     - name: Code coverage
       uses: codecov/codecov-action@v1
       with:
