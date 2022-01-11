@@ -41,7 +41,7 @@
 ├── .travis.yml # where you define the continuous integration done by Travis
 ├── LICENSE
 ├── README.md
-├── environment.yml # a simple environment for anything python related in this repo
+├── requirements.txt # list of python packages used in this repo: to install `pip install -r requirements.txt`
 ├── miss_hit.cfg # configuration file for the matlab miss hit linter
 └── initEnv.m # a .m file to set up your project (adds the right folder to the path)
 ```
