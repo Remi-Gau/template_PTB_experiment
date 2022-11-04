@@ -1,4 +1,4 @@
-% (C) Copyright 2020 CPP visual motion localizer developpers
+% (C) Copyright 2020 CPP visual motion localizer developers
 
 function [cfg] = setParameters()
 
@@ -18,7 +18,7 @@ function [cfg] = setParameters()
 
     cfg.debug.do = false; % To test the script out of the scanner, skip PTB sync
     cfg.debug.smallWin = false; % To test on a part of the screen, change to 1
-    cfg.debug.transpWin = true; % To test with trasparent full size screen
+    cfg.debug.transpWin = true; % To test with transparent full size screen
 
     cfg.verbose = 0;
 
@@ -57,7 +57,7 @@ function [cfg] = setParameters()
 
     cfg.timing.eventDuration = 2; % second
 
-    % Time between blocs in secs
+    % Time between blocks in secs
     cfg.timing.IBI = 2;
     % Time between events in secs
     cfg.timing.ISI = 1;
@@ -74,7 +74,7 @@ function [cfg] = setParameters()
 
         cfg.timing.eventDuration = cfg.mri.repetitionTime / 2 - 0.04; % second
 
-        % Time between blocs in secs
+        % Time between blocks in secs
         cfg.timing.IBI = 0;
         % Time between events in secs
         cfg.timing.ISI = 0;
